@@ -1,0 +1,33 @@
+{
+  "name": "hexo-sam-reader",
+  "version": "1.0.0",
+  "description": "SAM (Software Automatic Mouth) text-to-speech (TTS) reader widget for Hexo blog posts",
+  "main": "index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "assets/",
+    "index.js"
+  ],
+  "keywords": [
+    "hexo",
+    "hexo-plugin",
+    "sam",
+    "tts",
+    "text-to-speech",
+    "voice",
+    "reader",
+    "accessibility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trintlermint/hexo-sam-reader.git"
+  },
+  "author": "Niladri Adhikary (trintlermint)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}
