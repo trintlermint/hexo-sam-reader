@@ -18,7 +18,7 @@ Made with love by [trintlermint](#credits).
   - [From a (cloned) local directory](#from-a-cloned-local-directory)
 - [Usage](#usage)
   - [Enable SAM](#enable-sam)
-  - [2. Add helper](#2-add-helper)
+  - [Add helper](#add-helper)
 - [Configuration](#configuration)
   - [Abbreviations](#abbreviations)
   - [Styling](#styling)
@@ -63,7 +63,7 @@ sam: true
 ---
 ```
 
-### 2. Add helper
+### Add helper
 
 In your theme's sidebar or meta partial (e.g. `layout/_partial/post/meta.ejs`), call the helper:
 
