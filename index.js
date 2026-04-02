@@ -3,28 +3,39 @@
 
 const path = require('path');
 
-// merge user config with defaults
+var defaultStyle = {
+  background: '#000',
+  border_color: '#924a41',
+  text_color: '#c08179',
+  button_bg: '#352b42',
+  button_hover_bg: '#924a41',
+  button_active_bg: '#493aa5',
+  button_active_border: '#867ade',
+  progress_bg: '#252525',
+  progress_bar: '#867ade',
+  progress_border: '#3a3a3a',
+  status_color: '#bbb',
+  config_accent: '#867ade',
+  font_family: "DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace"
+};
+
+// merge user config
 hexo.config.sam_reader = Object.assign({
-  // front matter key to enable SAM on a post
   front_matter_key: 'sam',
-  // css selector for the post content container
   content_selector: '.mypage',
-  // Asset path prefix (where sam.js is served)
   asset_path: '/js/hexo-sam-reader',
-  // default voice settings, see example: https://discordier.github.io/sam/demos.html
   speed: 72,
   pitch: 64,
   mouth: 128,
   throat: 128,
-  // pause duration in ms between sections
   pause_ms: 400,
-  // max chunk length for SAM
   chunk_max_length: 200,
-  // custom abbreviations: { 'ABBR': 'spoken form' }, see readme
   abbreviations: {},
-  // css selectors to skip when extracting text
-  skip_selectors: ''
+  skip_selectors: '',
+  style: {}
 }, hexo.config.sam_reader);
+
+hexo.config.sam_reader.style = Object.assign({}, defaultStyle, hexo.config.sam_reader.style || {});
 
 // Register EJS helper
 hexo.extend.helper.register('sam_reader', require('./lib/helper')(hexo));
