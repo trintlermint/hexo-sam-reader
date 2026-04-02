@@ -4,7 +4,9 @@
 
 <img src="./assets/sam.png" alt="SAM TTS HEXO">
 
-A [Hexo](https://hexo.io) _plugin_ that adds a [SAM (Software Automatic Mouth)](https://github.com/discordier/sam) _text-to-speech_ (TTS) reader widget to your blog posts. SAM reads your post content aloud.
+A [Hexo](https://hexo.io) _plugin_ that adds a **[SAM (Software Automatic Mouth)](https://github.com/discordier/sam)** _text-to-speech_ (TTS) reader widget to your blog posts. SAM reads your post content aloud.
+
+See demo by going to [blog.trintler.me](https://blog.trintler.me), go to any post, and check the sidebar.
 
 Made with love by [trintlermint](#credits).
 
@@ -14,8 +16,9 @@ Made with love by [trintlermint](#credits).
 
 - [Installation](#installation)
   - [npm](#npm)
+  - [pnpm](#pnpm)
   - [GitHub](#github)
-  - [From a (cloned) local directory](#from-a-cloned-local-directory)
+  - [Clone](#clone)
 - [Usage](#usage)
   - [Enable SAM](#enable-sam)
   - [Add helper](#add-helper)
@@ -36,13 +39,21 @@ Made with love by [trintlermint](#credits).
 npm install hexo-sam-reader
 ```
 
+### pnpm
+
+use this if you have `pnpm-lock.yaml` instead:
+
+```bash
+pnpm install hexo-sam-reader
+```
+
 ### GitHub
 
 ```bash
 npm install github:trintlermint/hexo-sam-reader
 ```
 
-### From a (cloned) local directory
+### Clone
 
 ```bash
 git clone https://github.com/trintlermint/hexo-sam-reader.git
@@ -87,7 +98,7 @@ sam_reader:
   front_matter_key: sam
 
   # CSS selector for the post content container
-  content_selector: ".mypage"
+  content_selector: ".mypage" # for example, for default landscape theme use `".e-content"`
 
   # where bunddled generator.js is served (default: /js/hexo-sam-reader)
   asset_path: "/js/hexo-sam-reader"
